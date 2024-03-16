@@ -24,7 +24,10 @@ namespace PoolGame.utils
         float magnitude = Length();
         return new Vector2(X / magnitude, Y / magnitude);
     }
-
+    public float LengthSquared() 
+    {
+            return this.Length() * this.Length();
+    }
     public static Vector2 operator +(Vector2 v1, Vector2 v2)
     {
         return new Vector2(v1.X + v2.X, v1.Y + v2.Y);

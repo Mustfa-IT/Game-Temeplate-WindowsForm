@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
+            fps_Lable = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -36,24 +37,38 @@
             // 
             pictureBox1.Location = new Point(12, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(786, 444);
+            pictureBox1.Size = new Size(1525, 764);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.MouseDown += pictureBox1_MouseDown;
+            pictureBox1.MouseUp += pictureBox1_MouseUp;
+            // 
+            // fps_Lable
+            // 
+            fps_Lable.AutoSize = true;
+            fps_Lable.Location = new Point(21, 0);
+            fps_Lable.Name = "fps_Lable";
+            fps_Lable.Size = new Size(26, 15);
+            fps_Lable.TabIndex = 1;
+            fps_Lable.Text = "FPS";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1540, 777);
+            Controls.Add(fps_Lable);
             Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pictureBox1;
+        private Label fps_Lable;
     }
 }
